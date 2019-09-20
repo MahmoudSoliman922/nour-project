@@ -13,7 +13,7 @@ class V1::ImageBaseInsertionController < ApplicationController
     pp params[:file]
     pp '========================================================='
 
-      File.open("public/base64file", "w") {|f| f.write encoded_data}
+      File.open("public/base64file", "wb") {|f| f.write encoded_data}
 
     #   File.open('public/'+uploaded_io.original_filename, 'wb') do |file|
     #     file.write(uploaded_io.read)
